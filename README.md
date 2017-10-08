@@ -8,11 +8,13 @@
 
 Check out the [commit history](https://github.com/paulsturgess/todos-5.1.0/commits/master) to see how I configured various parts of the app.
 
-## Run the app locally
+## Run the app locally with following local environment 
 
 - Install [Yarn](https://yarnpkg.com/en/)
 - Ensure node version is >=4.7 https://github.com/rails/webpacker/issues/103
-- bundle
+- Ruby version - ruby-2.2.5
+- bundle install 
+- Install forego (https://dl.equinox.io/ddollar/forego/stable)
 - forego start
 - visit http://localhost:5000
 
