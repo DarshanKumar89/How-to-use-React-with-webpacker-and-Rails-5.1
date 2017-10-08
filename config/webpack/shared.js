@@ -41,6 +41,13 @@ const config = {
         }
       },
       {
+        test: /\.(css|scss)/,
+        loader: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader?modules&sourceMap&importLoaders=1&localIdentName=[local]!postcss-loader!sass-loader"
+        })
+      },
+      {
         test: /\.erb$/,
         enforce: 'pre',
         exclude: /node_modules/,
