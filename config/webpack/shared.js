@@ -5,6 +5,7 @@ const path = require('path')
 const process = require('process')
 const glob = require('glob')
 const extname = require('path-complete-extname')
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 "use strict";
 
@@ -40,12 +41,9 @@ const config = {
           ]
         }
       },
-      {
-        test: /\.(css|scss)/,
-        loader: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader?modules&sourceMap&importLoaders=1&localIdentName=[local]!postcss-loader!sass-loader"
-        })
+      { 
+        test: /\.(sass|scss)$/,
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       },
       {
         test: /\.erb$/,
