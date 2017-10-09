@@ -77,3 +77,11 @@ yarn test
 ```
 
 This is configured inside [package.json](package.json)
+
+
+## TODO In Repo
+
+- Include Other Webpack plugins Similar SCE[package.json](package.json)
+- Include Editor Config 
+- Update React 0.16 and webpack 3
+- Include Redux or Mobx
